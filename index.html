@@ -286,7 +286,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	@channel, a couple of you have pointed out that the tab panes are not working. After looking into it, I found that the smooth-scroll script is the culprit. I have updated the script to ignore any time you click on a nav-tab that leads to the following hrefs `#appetizers, #lunch, #dinner, #dessert` as long as that's what your links are pointing to, this script should fix any issues you may be having
-```<script>
+<script>
         $(function() {
             $('a[href*=#]:not([href=#])').click(function() {
                     if( $(this).attr("href")=="#carousel-example-generic" || $(this).attr("href")=="#appetizer" || $(this).attr("href")=="#lunch" || $(this).attr("href")=="#dinner" || $(this).attr("href")=="#dessert") return;//These are the exceptions
@@ -302,6 +302,6 @@
                     }
             });
         });
-  </script>```
+  </script>
 </body>
 </html>
